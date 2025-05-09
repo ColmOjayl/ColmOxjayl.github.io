@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameZone - Sua Loja Gamer</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: white;
+    }
+
+    .topbar {
+      background: #00bcd4;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1f1f1f;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #00bcd4;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1587202372775-a4292f9c7c31?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #00bcd4;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .product {
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    .product p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .product span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #00e676;
+    }
+
+    .about, .contact {
+      background-color: #181818;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    .footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+      color: #888;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: black;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    💥 Frete grátis para compras acima de R$200!
+  </div>
+
+  <header>
+    <div class="logo">🎮 GameZone</div>
+    <nav>
+      <a href="#jogos">Jogos</a>
+      <a href="#consoles">Consoles</a>
+      <a href="#acessorios">Acessórios</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo à GameZone! <br/> A sua loja gamer definitiva.</h1>
+  </section>
+
+  <section id="jogos">
+    <h2>Jogos em Destaque</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/0/0d/Elden_Ring_capa.jpg" alt="Jogo 1">
+        <h3>Elden Ring</h3>
+        <p>Explore um mundo sombrio e mágico em um RPG épico.</p>
+        <span>R$ 199,90</span>
+      </div>
+      <div class="product">
+        <img src="data:image/webp;base64,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" alt="Jogo 2">
+        <h3>God of War: Ragnarok</h3>
+        <p>Continue a jornada de Kratos no universo nórdico.</p>
+        <span>R$ 249,90</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="consoles">
+    <h2>Consoles</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2024/02/20/ps5-slim-01-t4w80aaqunub.jpg" alt="Console 1">
+        <h3>PlayStation 5</h3>
+        <p>Poder e performance de nova geração.</p>
+        <span>R$ 4.499,00</span>
+      </div>
+      <div class="product">
+        <img src="https://storage.googleapis.com/static.meupc.net/wp/1/2020/11/uFicTu3Ti56psJpsTGQ64C.jpg" alt="Console 2">
+        <h3>Xbox Series X</h3>
+        <p>Jogos em 4K e desempenho incomparável.</p>
+        <span>R$ 4.299,00</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="acessorios">
+    <h2>Acessórios</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7cwcDSourpdKXaBJaQOa5lmLw5dy6ldhZ1S0AHy_NvdeIy8Ey8rp20-Y4GYFSxnftTvU&usqp=CAU" alt="Controle">
+        <h3>Controle DualSense</h3>
+        <p>Feedback tátil e gatilhos adaptáveis.</p>
+        <span>R$ 399,90</span>
+      </div>
+      <div class="product">
+        <img src="https://a-static.mlcdn.com.br/800x600/headset-gamer-hyperx-cloud-ii-pro-gaming/magazineluiza/218945800/86eb8371b829a7ed95d54c196f91441d.jpg" alt="Headset">
+        <h3>Headset Gamer</h3>
+        <p>Áudio imersivo para jogos competitivos.</p>
+        <span>R$ 299,90</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <h2>Sobre a GameZone</h2>
+    <p>A GameZone nasceu da paixão por games e tecnologia. Nosso objetivo é oferecer os melhores produtos, lançamentos e acessórios para gamers de todos os níveis. Com atendimento especializado e entrega rápida, garantimos uma experiência de compra épica.</p>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2>Fale Conosco</h2>
+    <p>📞 WhatsApp: (11) 99999-9999<br/>
+       ✉️ E-mail: contato@gamezone.com.br<br/>
+       📍 Endereço: Av. Gamer, 123 - São Paulo, SP</p>
+    <a href="mailto:contato@gamezone.com.br" class="button">Enviar E-mail</a>
+  </section>
+
+  <div class="footer">
+    © 2025 GameZone. Todos os direitos reservados.
+  </div>
+
+</body>
+</html>
